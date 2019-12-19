@@ -15,6 +15,11 @@ class OrmApiExample(models.Model):
         print(res)
         return res
 
+    @api.model
+    def my_custom_function(self):
+        print('on click onExportFunction..')
+        return "some_value"
+
 #     name = fields.Char()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)

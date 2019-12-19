@@ -18,5 +18,11 @@
         <!--     </t> -->
         <!--   </dl> -->
         <!-- </template> -->
+
+        <template id="assets_backend" name="qweb_extend_template assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/orm_api_example/static/src/js/qweb.js"></script>
+            </xpath>
+        </template>
     </data>
 </odoo>

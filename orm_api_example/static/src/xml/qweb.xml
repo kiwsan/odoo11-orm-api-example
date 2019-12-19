@@ -1,0 +1,18 @@
+<templates>
+    <!--https://stackoverflow.com/questions/58202242/add-button-after-import-button-odoo-11-->
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="after">
+            <button t-if='widget and widget.importEnabled' type="button"
+                    class="btn btn-sm btn-default o_button_export_extend">
+                Extend
+            </button>
+        </t>
+    </t>
+    <t t-extend="ImportView.import_button">
+        <t t-jquery="button.o_button_import" t-operation="after">
+            <button t-name="button_export_extend" type="button" class="btn btn-sm btn-default o_button_export">
+                Export To A
+            </button>
+        </t>
+    </t>
+</templates>
