@@ -10,11 +10,11 @@ odoo.define('extend_addons.button_export_extend', function (require) {
             this._super.apply(this, arguments);
             if (this.$buttons) {
                 let importButton = this.$buttons.find(".o_button_export");
-                importButton && importButton.click(this.proxy("importLastSalesAction"));
+                importButton && importButton.click(this.proxy("exportOnClickHandler"));
             }
         },
 
-        importLastSalesAction: function () {
+        exportOnClickHandler: function () {
             //implement your click logic here
             Model.query({
                 model: "orm_api_example.note",
